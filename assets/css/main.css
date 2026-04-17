@@ -1,0 +1,297 @@
+:root {
+--blue: #0d9488;
+  --blue-light: #e6fffa;
+  --blue-mid: #b2f5ea; 
+
+  --sidebar-width: 236px;
+  --sidebar-collapsed: 60px;
+  --sidebar-bg: #f3f4f6;
+  --sidebar-text: #111318;
+  --sidebar-muted: #6b7280;
+  --sidebar-hover: rgba(11, 140, 233, 0.07);
+  --sidebar-active: #e8f4fd;
+  --sidebar-border: #e4e4e7;
+  --sidebar-border-strong: #d1d1d6;
+
+  --bg: #ffffff;
+  --bg-app: #f3f4f6;
+  --bg-secondary: #f8f9fb;
+  --bg-tertiary: #f0f1f3;
+  --bg-hover: #ebebec;
+  --border: #e4e4e7;
+  --border-strong: #d1d1d6;
+
+  --text: #09090b;
+  --text-secondary: #52525b;
+  --text-muted: #a1a1aa;
+
+  --accent: #0d9488;
+  --accent-hover: #0f766e;
+  --accent-fg: #ffffff;
+
+  --danger: #ef4444;
+  --danger-bg: #fef2f2;
+  --success: #22c55e;
+  --success-bg: #f0fdf4;
+
+  --user-bubble: #111318;
+  --user-bubble-text: #ffffff;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+
+  --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Fira Code", "Cascadia Code", "JetBrains Mono", monospace;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: var(--font);
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  background-color: var(--p-dashboard-main-bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#__nuxt {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ═══════════════════════════════════════════════════════
+   SCROLLBARS
+   ═══════════════════════════════════════════════════════ */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ═══════════════════════════════════════════════════════
+   MARKDOWN / PROSE
+   ═══════════════════════════════════════════════════════ */
+.prose {
+  word-break: break-word;
+  font-size: 0.925rem;
+  line-height: 1.7;
+}
+.prose p {
+  margin-bottom: 0.8em;
+}
+.prose p:last-child {
+  margin-bottom: 0;
+}
+.prose ul,
+.prose ol {
+  padding-left: 1.5em;
+  margin-bottom: 0.8em;
+}
+.prose li {
+  margin-bottom: 0.3em;
+}
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 1.2em 0 0.5em;
+  letter-spacing: -0.01em;
+}
+.prose h1 {
+  font-size: 1.35em;
+}
+.prose h2 {
+  font-size: 1.18em;
+}
+.prose h3 {
+  font-size: 1.05em;
+}
+.prose blockquote {
+  border-left: 3px solid var(--border-strong);
+  padding-left: 1em;
+  color: var(--text-secondary);
+  margin: 0.8em 0;
+  font-style: italic;
+}
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--border-strong);
+}
+.prose a:hover {
+  text-decoration-color: var(--accent);
+}
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+.prose pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.prose table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.8em 0;
+  font-size: 0.9em;
+}
+.prose th,
+.prose td {
+  border: 1px solid var(--border);
+  padding: 0.45em 0.85em;
+  text-align: left;
+}
+.prose th {
+  background: var(--bg-secondary);
+  font-weight: 600;
+}
+.prose tr:nth-child(even) td {
+  background: var(--bg-secondary);
+}
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.2em 0;
+}
+.prose img {
+  max-width: 100%;
+  border-radius: var(--radius-sm);
+}
+
+/* ═══════════════════════════════════════════════════════
+   CODE BLOCKS
+   ═══════════════════════════════════════════════════════ */
+:global(.code-block) {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 0.85em 0;
+  box-shadow: var(--shadow-sm);
+}
+:global(.code-block__header) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.9rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+}
+:global(.code-block__lang) {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+:global(.code-block__copy) {
+  font-family: var(--font);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.15rem 0.55rem;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+:global(.code-block__copy:hover) {
+  background: var(--bg-hover);
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+:global(.code-block__copy--done) {
+  color: var(--success);
+  border-color: #bbf7d0;
+  background: var(--success-bg);
+}
+:global(.code-block pre) {
+  margin: 0;
+  padding: 1em 1.1em;
+  overflow-x: auto;
+  background: var(--bg);
+  font-size: 0.84em;
+  line-height: 1.6;
+}
+:global(.code-block code) {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 1em;
+}
+
+/* ═══════════════════════════════════════════════════════
+   TRANSITIONS
+   ═══════════════════════════════════════════════════════ */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.15s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(-8px);
+  opacity: 0;
+}
