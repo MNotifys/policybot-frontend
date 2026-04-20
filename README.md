@@ -1,2 +1,3 @@
-# gepbot-frontend
+# policybot-frontend
 Nuxt Policy Bot Project
+
