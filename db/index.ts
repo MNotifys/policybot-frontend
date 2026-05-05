@@ -1,7 +1,5 @@
 import Dexie, { type Table } from 'dexie'
 
-// ─── Types ────────────────────────────────────────────────────────────────────
-
 export interface Conversation {
   id?: number
   title: string
@@ -18,8 +16,6 @@ export interface Message {
   createdAt: number
   isStreaming?: boolean
 }
-
-// ─── Schema ───────────────────────────────────────────────────────────────────
 
 export class GepbotDB extends Dexie {
   conversations!: Table<Conversation, number>

@@ -43,7 +43,7 @@ function resizeTextarea() {
 
     <Transition name="fade">
       <div v-if="centered" class="input-wrap__greeting">
-        <h1 class="input-wrap__heading">Welcome to <span class="input-wrap__span">Entrepreneurship Policy Bot</span>
+        <h1 class="input-wrap__heading">Welcome to the <span class="input-wrap__span">Entrepreneurship Policy Bot</span>
         </h1>
       </div>
     </Transition>
