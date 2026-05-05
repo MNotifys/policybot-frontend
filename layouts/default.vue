@@ -20,19 +20,7 @@
   border-radius: 14px;
   overflow: hidden;
   display: flex;
-}
-:deep(.sidebar) {
-  background: var(--sidebar-bg);
-  border-radius: 22px;
-  margin: 22px 18px 2px 22px;
-  overflow: hidden;
-  flex-shrink: 0;
-  /* width: 240px !important; */
-  min-width: 300px !important;
-}
-:deep(.sidebar--collapsed) {
-  width: var(--sidebar-collapsed) !important;
-  min-width: var(--sidebar-collapsed) !important;
+  flex-direction: column; 
 }
 .dashboard-content {
   flex: 1;
